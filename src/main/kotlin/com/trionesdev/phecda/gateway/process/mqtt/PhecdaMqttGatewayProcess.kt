@@ -2,7 +2,7 @@ package com.trionesdev.phecda.gateway.process.mqtt
 
 import org.eclipse.paho.client.mqttv3.MqttMessage
 
-class DefaultMqttGatewayProcess: MqttGatewayProcess() {
+class PhecdaMqttGatewayProcess: MqttGatewayProcess() {
     override fun match(topic: String, message: MqttMessage): Boolean {
         TODO("Not yet implemented")
     }
