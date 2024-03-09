@@ -53,6 +53,13 @@
 			<artifactId>reactor-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.trionesdev.mqtt</groupId>
+			<artifactId>triones-mqttv3-spring-boot-starter</artifactId>
+			<version>1.0-SNAPSHOT</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
