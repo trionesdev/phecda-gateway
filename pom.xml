@@ -44,6 +44,10 @@
             <groupId>com.trionesdev.phecda</groupId>
             <artifactId>phecda-gateway-process-mqtt</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.trionesdev.phecda</groupId>
+            <artifactId>phecda-gateway-process-http</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
