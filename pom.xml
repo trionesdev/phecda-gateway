@@ -48,6 +48,10 @@
             <groupId>com.trionesdev.phecda</groupId>
             <artifactId>phecda-gateway-process-http</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.trionesdev.phecda</groupId>
+            <artifactId>phecda-gateway-process-tcp</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
