@@ -1,7 +1,9 @@
 package com.trionesdev.phecda.gateway.process.http;
 
 import com.trionesdev.phecda.gateway.core.GatewayProcessComponent;
+import com.trionesdev.phecda.gateway.core.model.PhecdaEvent;
 import com.trionesdev.phecda.gateway.http.process.HttpGatewayProcess;
+import kotlin.Unit;
 import lombok.RequiredArgsConstructor;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -18,9 +20,12 @@ public class TestHttpGatewayProcess extends HttpGatewayProcess {
         return true;
     }
 
-    @NotNull
+    @Nullable
     @Override
-    public Mono<ServerResponse> requestProcess(@Nullable ServerRequest request) {
-        return null;
+    public Object doProcess(@Nullable ServerRequest request) {
+        PhecdaEvent event =  new PhecdaEvent();
+        event.setId("sss");
+        postProperties(event);
+        return event;
     }
 }
