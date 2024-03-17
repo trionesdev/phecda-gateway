@@ -10,9 +10,15 @@
     </parent>
     <groupId>com.trionesdev.phecda</groupId>
     <artifactId>phecda-gateway</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>phecda-gateway</name>
     <description>Phecda Gateway</description>
+    <modules>
+        <module>core</module>
+        <module>serve</module>
+        <module>rest-ssp</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -23,42 +29,29 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.trionesdev.phecda</groupId>
+                <artifactId>core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.trionesdev.phecda</groupId>
+                <artifactId>rest-ssp</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.trionesdev.phecda</groupId>
+                <artifactId>serve</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
     <properties>
         <java.version>11</java.version>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.10</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>com.trionesdev.phecda</groupId>
-            <artifactId>phecda-gateway-process-http</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.trionesdev.phecda</groupId>
-            <artifactId>phecda-gateway-process-mqtt</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.trionesdev.phecda</groupId>
-            <artifactId>phecda-gateway-process-tcp</artifactId>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>
