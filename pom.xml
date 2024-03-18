@@ -49,7 +49,7 @@
             </dependency>
             <dependency>
                 <groupId>com.trionesdev.phecda.gateway</groupId>
-                <artifactId>rest-ssp-sdk</artifactId>
+                <artifactId>phecda-gateway-rest-ssp-sdk</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
             <dependency>
