@@ -3,22 +3,29 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.4</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>ms.triones</groupId>
+        <artifactId>triones-spring-boot-parent</artifactId>
+        <version>1.1-SNAPSHOT</version>
+        <relativePath/>
     </parent>
     <groupId>com.trionesdev.phecda</groupId>
     <artifactId>phecda-gateway</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>phecda-gateway</name>
+    <name>Phecda:Gateway</name>
     <description>Phecda Gateway</description>
     <modules>
         <module>core</module>
         <module>serve</module>
         <module>rest-ssp</module>
+        <module>rest-ssp-sdk</module>
     </modules>
+
+    <properties>
+        <java.version>11</java.version>
+        <maven.deploy.skip>true</maven.deploy.skip>
+    </properties>
+
 
     <dependencyManagement>
         <dependencies>
@@ -42,16 +49,17 @@
             </dependency>
             <dependency>
                 <groupId>com.trionesdev.phecda</groupId>
+                <artifactId>rest-ssp-sdk</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.trionesdev.phecda</groupId>
                 <artifactId>serve</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 
         </dependencies>
     </dependencyManagement>
-    <properties>
-        <java.version>11</java.version>
-    </properties>
-
 
     <build>
         <plugins>

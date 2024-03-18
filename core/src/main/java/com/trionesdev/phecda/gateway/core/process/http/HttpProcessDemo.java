@@ -8,7 +8,7 @@ import reactor.netty.http.server.HttpServerRequest;
 @GatewayProcessComponent(productKeys = {"http1"})
 public class HttpProcessDemo extends HttpGatewayProcess {
     @Override
-    public boolean requestMatch(@Nullable HttpServerRequest request) {
+    public boolean match(@Nullable HttpServerRequest request) {
         return true;
     }
 

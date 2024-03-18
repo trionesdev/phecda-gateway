@@ -8,8 +8,8 @@
         <artifactId>phecda-gateway</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <name>Phecda:Gateway:RestSSP</name>
-    <artifactId>rest-ssp</artifactId>
+    <name>Phecda:Gateway:RestSSPSdk</name>
+    <artifactId>rest-ssp-sdk</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -19,18 +19,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.trionesdev.phecda</groupId>
-            <artifactId>core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.trionesdev.phecda</groupId>
-            <artifactId>rest-ssp-sdk</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
     </dependencies>
 
