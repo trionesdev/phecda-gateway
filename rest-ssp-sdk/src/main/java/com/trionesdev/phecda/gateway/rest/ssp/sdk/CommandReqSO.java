@@ -7,6 +7,7 @@ import java.util.Map;
 @Data
 public class CommandReqSO {
     private String version;
+    private String method;
     private String productKey;
     private String deviceName;
     private String commandName;
