@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
 import java.util.Objects;
 
 import static com.trionesdev.phecda.gateway.rest.support.RestConstants.CONTEXT_PATH;
@@ -22,7 +23,7 @@ public class PhecdaGatewayController implements PhecdaGatewayRest {
     private final GatewayProcessFactory gatewayProcessFactory;
 
     @Override
-    public Object sendCommand(CommandReqSO commandReqSO) {
+    public Map<String,Object> sendCommand(CommandReqSO commandReqSO) {
         GatewayProcess gatewayProcess = gatewayProcessFactory.getGatewayProcess(commandReqSO.getProductKey());
         if (Objects.isNull(gatewayProcess)) {
             throw new RuntimeException("[PhecdaGatewayController] Gateway process not found");
