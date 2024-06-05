@@ -19,6 +19,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.trionesdev.phecda.gateway</groupId>
+            <artifactId>phecda-gateway-rest-ssp-sdk</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
@@ -26,10 +30,7 @@
             <groupId>com.trionesdev.phecda.gateway</groupId>
             <artifactId>core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.trionesdev.phecda.gateway</groupId>
-            <artifactId>phecda-gateway-rest-ssp-sdk</artifactId>
-        </dependency>
+
     </dependencies>
 
 </project>
