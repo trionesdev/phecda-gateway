@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.trionesdev.phecda.gateway</groupId>
-            <artifactId>phecda-gateway-rest-ssp-sdk</artifactId>
+            <artifactId>rest-ssp-sdk</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

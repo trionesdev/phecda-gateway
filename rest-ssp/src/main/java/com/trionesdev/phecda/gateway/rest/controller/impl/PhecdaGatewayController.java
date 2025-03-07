@@ -1,7 +1,7 @@
 package com.trionesdev.phecda.gateway.rest.controller.impl;
 
-import com.trionesdev.phecda.gateway.core.GatewayProcessor;
-import com.trionesdev.phecda.gateway.core.GatewayProcessFactory;
+import com.trionesdev.phecda.gateway.core.GatewayHandler;
+import com.trionesdev.phecda.gateway.core.GatewayHandlerFactory;
 import com.trionesdev.phecda.gateway.core.model.PhecdaCommand;
 import com.trionesdev.phecda.gateway.rest.ssp.sdk.CommandReqSO;
 import com.trionesdev.phecda.gateway.rest.ssp.sdk.PhecdaGatewayRest;
@@ -13,18 +13,18 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
 import java.util.Objects;
 
-import static com.trionesdev.phecda.gateway.rest.support.RestConstants.CONTEXT_PATH;
+import static com.trionesdev.phecda.gateway.rest.internal.RestConstants.CONTEXT_PATH;
 
 @Slf4j
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(CONTEXT_PATH)
 public class PhecdaGatewayController implements PhecdaGatewayRest {
-    private final GatewayProcessFactory gatewayProcessFactory;
+    private final GatewayHandlerFactory gatewayHandlerFactory;
 
     @Override
     public Map<String,Object> sendCommand(CommandReqSO commandReqSO) {
-        GatewayProcessor gatewayProcessor = gatewayProcessFactory.getGatewayProcess(commandReqSO.getProductKey());
+        GatewayHandler gatewayProcessor = gatewayHandlerFactory.getGatewayHandler(commandReqSO.getProductKey());
         if (Objects.isNull(gatewayProcessor)) {
             throw new RuntimeException("[PhecdaGatewayController] Gateway process not found");
         }

@@ -1,15 +1,15 @@
-package com.trionesdev.phecda.gateway.core.process.mqtt;
+package com.trionesdev.phecda.gateway.core.handle.mqtt;
 
 import com.alibaba.fastjson2.JSON;
-import com.trionesdev.phecda.gateway.core.GatewayProcessorComponent;
+import com.trionesdev.phecda.gateway.core.GatewayHandlerComponent;
 import com.trionesdev.phecda.gateway.core.model.PhecdaCommand;
 import com.trionesdev.phecda.gateway.core.model.PhecdaEvent;
-import com.trionesdev.phecda.gateway.mqtt.process.MqttGatewayProcessor;
+import com.trionesdev.phecda.gateway.mqtt.handle.MqttGatewayHandler;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.jetbrains.annotations.NotNull;
 
-@GatewayProcessorComponent(productKeys = {"mqtt1"})
-public class MqttTestProcessor extends MqttGatewayProcessor {
+@GatewayHandlerComponent(productKeys = {"mqtt1"})
+public class MqttDemoHandler extends MqttGatewayHandler {
 
 
     @Override

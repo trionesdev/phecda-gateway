@@ -37,15 +37,15 @@
 
         <dependency>
             <groupId>com.trionesdev.phecda</groupId>
-            <artifactId>phecda-gateway-process-http</artifactId>
+            <artifactId>phecda-gateway-handler-http</artifactId>
         </dependency>
         <dependency>
             <groupId>com.trionesdev.phecda</groupId>
-            <artifactId>phecda-gateway-process-mqtt</artifactId>
+            <artifactId>phecda-gateway-handler-mqtt</artifactId>
         </dependency>
         <dependency>
             <groupId>com.trionesdev.phecda</groupId>
-            <artifactId>phecda-gateway-process-tcp</artifactId>
+            <artifactId>phecda-gateway-handler-tcp</artifactId>
         </dependency>
     </dependencies>
 
